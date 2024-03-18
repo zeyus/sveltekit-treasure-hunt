@@ -1,7 +1,7 @@
 <script lang="ts">
     let src="/pirate.jpg"
     import type { PageData } from './$types';
-    import { Button } from '@sveltestrap/sveltestrap';
+    import { Button, Input } from '@sveltestrap/sveltestrap';
     export let data: PageData;
 
     if (data.visited) {
@@ -11,7 +11,7 @@
         // redirect to the start page
         window.location.href = '/';
     }
-
+    src = data.question?.questionImg || src;
 </script>
 <style>
 
@@ -23,11 +23,13 @@
     <img {src} alt="Pirate" width="50%" />
     
 {:else}
-    <h1>Skattejagt</h1>
+    <!-- question component -->
+    <!-- <h1>Skattejagt</h1>
     <p>Questioner { data.step }</p>
     <h2>{data.question?.question}</h2>
     {#if data.question?.details}
         <p>{data.question?.details}</p>
     {/if}
+    <img {src} alt="..." width="50%" /> -->
 {/if}
 

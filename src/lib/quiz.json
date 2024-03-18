@@ -2,12 +2,12 @@
     "step": "1",
     "question": "Hvad heddere hovedpersonen i Dune?",
     "details": "Dune er en science fiction roman fra 1965, skrevet af Frank Herbert. Bogen er den første i en serie på seks bøger, og er en af de mest solgte science fiction bøger nogensinde.",
-    "questionImg": "img/dune.jpg",
+    "questionImg": "/shai-hulud.jpg",
     "answers": [
         "Paul Atreides",
         "Paul"
     ],
-    "answerImg": "img/paul.jpg",
+    "answerImg": "/dune-3.jpg",
     "loc": {
         "lat": "55.6761",
         "lng": "12.5683"
