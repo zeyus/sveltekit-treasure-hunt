@@ -1,0 +1,31 @@
+[{
+    "step": "1",
+    "question": "Hvad heddere hovedpersonen i Dune?",
+    "details": "Dune er en science fiction roman fra 1965, skrevet af Frank Herbert. Bogen er den første i en serie på seks bøger, og er en af de mest solgte science fiction bøger nogensinde.",
+    "questionImg": "img/dune.jpg",
+    "answers": [
+        "Paul Atreides",
+        "Paul"
+    ],
+    "answerImg": "img/paul.jpg",
+    "loc": {
+        "lat": "55.6761",
+        "lng": "12.5683"
+    },
+    "answerText": "Paul Atreides er hovedpersonen i Dune. Han er søn af Duke Leto Atreides og Lady Jessica, og er arving til Hertugdømmet Atreides."
+},
+{
+    "step": "2",
+    "question": "Hvem har skrevet bogen?",
+    "questionImg": "img/dune.jpg",
+    "answers": [
+        "Frank Herbert",
+        "Herbert"
+    ],
+    "answerImg": "img/herbert.jpg",
+    "loc": {
+        "lat": "55.6761",
+        "lng": "12.5683"
+    }
+}
+]
