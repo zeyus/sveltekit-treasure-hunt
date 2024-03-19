@@ -1,35 +1,56 @@
 <script lang="ts">
     let src="/pirate.jpg"
+    import { get } from 'svelte/store';
     import type { PageData } from './$types';
-    import { Button, Input } from '@sveltestrap/sveltestrap';
+    import { stepIndex } from "$lib/store";
+    import { Icon, Button } from '@sveltestrap/sveltestrap';
+    import Question from '../../../components/Question.svelte';
+    import Answer from '../../../components/Answer.svelte';
     export let data: PageData;
-
-    if (data.visited) {
-        console.log('Visited!');
-    } else {
-        console.log('Not visited!');
-        // redirect to the start page
-        window.location.href = '/';
-    }
+    let step: number;
     src = data.question?.questionImg || src;
+    step = parseInt(get(stepIndex));
+    console.log('Step:', step);
+    console.log('Data Step:', data.step);
+    if (step < data.step || data.step === -1) {
+        step = -1;
+    }
+    let answered = step > data.step;
+    const check = !answered;
+    function showAnswer(e: CustomEvent<{ step: boolean }>) {
+        console.log('Showing the answer');
+        if (e.detail.step) {
+            stepIndex.set(step + 1);
+            answered = true;
+        }
+    }
+
+    function moveToNextStep() {
+        console.log('Moving to next step');
+        window.location.href = `/hunt/${parseInt(get(stepIndex))}`;
+    }
+
+    function clearStoreAndMove() {
+        console.log('Clearing store and moving');
+        stepIndex.set(1);
+        window.location.href = '/hunt/1';
+    }
 </script>
 <style>
 
 </style>
-{#if data.step === -1}
+<h1>Skattejagt</h1>
+<p><Button color="danger" on:click={clearStoreAndMove} outline><Icon name="trash" /> Nulstil</Button></p>
+{#if step === -1}
     <h1>Naughty naughty!</h1>
     <p>Det er ikke tilladt at gå direkte til en side i skattejagten!</p>
-    <p>Klik på knappen for at gå tilbage. <Button color="primary" on:click="{() => window.location.href = '/hunt/1'}">tilbage</Button></p>
+    <p>Klik på knappen for at gå tilbage. <Button color="primary" on:click={moveToNextStep}>tilbage</Button></p>
     <img {src} alt="Pirate" width="50%" />
     
+{:else if answered !== true}
+    <p>Questioner { step }</p>
+    <Question question={data.question} on:next={showAnswer} />
 {:else}
-    <!-- question component -->
-    <!-- <h1>Skattejagt</h1>
-    <p>Questioner { data.step }</p>
-    <h2>{data.question?.question}</h2>
-    {#if data.question?.details}
-        <p>{data.question?.details}</p>
-    {/if}
-    <img {src} alt="..." width="50%" /> -->
+    <Answer question={data.question} check={check} on:next={moveToNextStep} />
 {/if}
 

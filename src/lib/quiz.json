@@ -9,8 +9,8 @@
     ],
     "answerImg": "/dune-3.jpg",
     "loc": {
-        "lat": "55.6761",
-        "lng": "12.5683"
+        "lat": "56.1471",
+        "lng": "10.0983"
     },
     "answerText": "Paul Atreides er hovedpersonen i Dune. Han er søn af Duke Leto Atreides og Lady Jessica, og er arving til Hertugdømmet Atreides."
 },
@@ -26,6 +26,7 @@
     "loc": {
         "lat": "55.6761",
         "lng": "12.5683"
-    }
+    },
+    "answerText": "Paul Atreides er hovedpersonen i Dune. Han er søn af Duke Leto Atreides og Lady Jessica, og er arving til Hertugdømmet Atreides."
 }
 ]
