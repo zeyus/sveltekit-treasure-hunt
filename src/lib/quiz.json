@@ -10,8 +10,8 @@
         ],
         "answerImg": "/pharrell.jpg",
         "loc": {
-            "lat": "56.151602998320181",
-            "lng": "10.091466728702313"
+            "lat": "50.00001",
+            "lng": "10.00001"
         },
         "answerText": "Pharrel Williams er en amerikansk sanger, sangskriver, musikproducer og mode designer. Han er bedst kendt som en del af hip hop og R&B produktionsteamet The Neptunes og som forsanger i gruppen N.E.R.D."
     },
@@ -25,8 +25,8 @@
         ],
         "answerImg": "/brabrand2.jpg",
         "loc": {
-            "lat": "56.14950153495022",
-            "lng": "10.089752784010717"
+            "lat": "50.00001",
+            "lng": "10.00001"
         },
         "answerText": "Brabrand er en bydel i Aarhus, og er en af de ældste bydele i Aarhus. Bydelen er over 800 år gammel."
     },
@@ -41,8 +41,8 @@
         ],
         "answerImg": "/steve.jpg",
         "loc": {
-            "lat": "56.15031837412376",
-            "lng": "10.089364058279466"
+            "lat": "50.00001",
+            "lng": "10.00001"
         },
         "answerText": "Brabrand er en bydel i Aarhus, og er en af de ældste bydele i Aarhus. Bydelen er over 800 år gammel."
     },
@@ -57,8 +57,8 @@
         ],
         "answerImg": "/dune-3.jpg",
         "loc": {
-            "lat": "56.15176477030447",
-            "lng": "10.088486300151956"
+            "lat": "50.00001",
+            "lng": "10.00001"
         },
         "answerText": "Paul Atreides er hovedpersonen i Dune. Han er søn af Duke Leto Atreides og Lady Jessica, og er arving til Hertugdømmet Atreides."
     },
@@ -70,10 +70,10 @@
             "hyggegruppe",
             "hygge gruppe"
         ],
-        "answerImg": "/shed.jpg",
+        "answerImg": "/congrats.jpg",
         "loc": {
-            "lat": "56.152894789504394",
-            "lng": "10.090691576405948"
+            "lat": "50.00001",
+            "lng": "10.00001"
         },
         "answerText": "Paul Atreides er hovedpersonen i Dune. Han er søn af Duke Leto Atreides og Lady Jessica, og er arving til Hertugdømmet Atreides."
     }

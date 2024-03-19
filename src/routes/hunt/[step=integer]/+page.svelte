@@ -15,6 +15,7 @@
 
     onMount(() => {
 		const interval = setInterval(() => {
+            // this may not be necessary, but some weird caching issues were happening
 			invalidate('/hunt/1');
             invalidate('/hunt/2');
             invalidate('/hunt/3');
