@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { base } from '$app/paths';
     let src="/pirate.jpg"
     import { get } from 'svelte/store';
     import type { PageData } from './$types';
@@ -78,7 +79,7 @@
     <Container fluid>
         <Row><h2>Tillykke, du har gennemført skattejagten med succes!!</h2></Row>
         <Row><p>Tak fordi du spiller!</p></Row>
-        <Row><img {src} alt="Tak" class="img-fluid" /></Row>
+        <Row><img src={base + src} alt="Tak" class="img-fluid" /></Row>
     </Container>
 {:else if step === -1}
     <Container fluid>
@@ -86,7 +87,7 @@
         <Row><p>Det er ikke tilladt at gå direkte til en side i skattejagten!</p></Row>
         <Row><p>Klik på knappen for at gå tilbage.</p></Row>
         <Row><Button color="primary" on:click={moveToNextStep}>tilbage</Button></Row>
-        <Row><img {src} alt="Pirate" class="img-fluid" /></Row>
+        <Row><img src={base + src} alt="Pirate" class="img-fluid" /></Row>
     </Container>
 {:else if answered !== true}
     <Container fluid><h2 class="mt-4">Questioner { step }</h2></Container>

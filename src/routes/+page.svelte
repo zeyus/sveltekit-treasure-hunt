@@ -1,6 +1,7 @@
 <script lang="ts">
+    import { base } from '$app/paths';
     import { Button, Row, Col } from '@sveltestrap/sveltestrap';
-
+    let src = base + "/hunt.jpg";
     function startHunt() {
         console.log('Starting the hunt!');
         window.location.href = '/hunt/1';
@@ -29,5 +30,5 @@
     </Col>
 </Row>
 <Row>
-    <Col style="text-align: center;"><img src="/hunt.jpg" alt="treasure hunt" width="50%" style="margin: 10px auto;" /></Col>
+    <Col style="text-align: center;"><img {src} alt="treasure hunt" width="50%" style="margin: 10px auto;" /></Col>
 </Row>
