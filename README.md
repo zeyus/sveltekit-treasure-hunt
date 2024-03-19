@@ -20,6 +20,28 @@ Question and answer templates are in [`src/components/`](src/components/). The m
 
 You can configure the questions, answers, locations and image paths in the [`src/lib/quiz.json`](src/lib/quiz.json) file. Images are stored in the [`static/`](static/) folder. Subdirectory / base path configuration is in the [`svelte.config.js`](svelte.config.js) file.
 
+_Note:_ If you deploy a static version like the preview version above, you will need to configure the `prerender` `entries` with the number of questions you have, e.g. for 7 questions you would set it like so:
+
+```javascript
+const config = {
+  // ...
+  prerender: {
+			entries: [
+				'*',
+				'/hunt/1',
+				'/hunt/2',
+				'/hunt/3',
+				'/hunt/4',
+				'/hunt/5',
+				'/hunt/6',
+				'/hunt/7',
+			]
+		}
+}
+```
+
+This ensures that each of those paths exists .
+
 
 ## Developing
 
