@@ -16,9 +16,9 @@
     step = parseInt(get(stepIndex));
     console.log('Step:', step);
     console.log('Data Step:', data.step);
-    const completed = step > data.count && data.oob;
+    let completed = step > data.count && data.oob;
     src = completed ? '/congrats.jpg' : src;
-    const showPrevious = (step > 1 && data.step > 1) || (step > data.count && data.oob);
+    let showPrevious = (step > 1 && data.step > 1) || (step > data.count && data.oob);
     if (step < data.step || data.step === -1) {
         step = -1;
     }
@@ -36,16 +36,21 @@
 
     function moveToNextStep() {
         console.log('Moving to next step');
+        completed = false;
+        step = parseInt(get(stepIndex));
         goto(base+`/hunt/${parseInt(get(stepIndex))}`, { replaceState: true, invalidateAll: true });
     }
 
     function moveToPrevStep() {
         console.log('Moving to previous step');
+        step = data.prev;
         goto(base+`/hunt/${data.prev}`, { replaceState: true, invalidateAll: true });
     }
 
     function clearStoreAndMove() {
         console.log('Clearing store and moving');
+        completed = false;
+        step = 1;
         stepIndex.set(1);
         goto(base+'/hunt/1', { replaceState: true, invalidateAll: true });
     }
