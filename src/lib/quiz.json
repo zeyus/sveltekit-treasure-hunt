@@ -1,32 +1,80 @@
-[{
-    "step": "1",
-    "question": "Hvad heddere hovedpersonen i Dune?",
-    "details": "Dune er en science fiction roman fra 1965, skrevet af Frank Herbert. Bogen er den første i en serie på seks bøger, og er en af de mest solgte science fiction bøger nogensinde.",
-    "questionImg": "/shai-hulud.jpg",
-    "answers": [
-        "Paul Atreides",
-        "Paul"
-    ],
-    "answerImg": "/dune-3.jpg",
-    "loc": {
-        "lat": "56.1471",
-        "lng": "10.0983"
+[
+    {
+        "step": "1",
+        "question": "Hven Sang denne sang 'Happy' fra 2013?",
+        "details": "Magne personer har sun get sangen",
+        "questionImg": "/shai-hulud.jpg",
+        "answers": [
+            "Pharrell Williams",
+            "Pharrell"
+        ],
+        "answerImg": "/dune-3.jpg",
+        "loc": {
+            "lat": "56.1471",
+            "lng": "10.0983"
+        },
+        "answerText": "Pharrel Williams er en amerikansk sanger, sangskriver, musikproducer og mode designer. Han er bedst kendt som en del af hip hop og R&B produktionsteamet The Neptunes og som forsanger i gruppen N.E.R.D."
     },
-    "answerText": "Paul Atreides er hovedpersonen i Dune. Han er søn af Duke Leto Atreides og Lady Jessica, og er arving til Hertugdømmet Atreides."
-},
-{
-    "step": "2",
-    "question": "Hvem har skrevet bogen?",
-    "questionImg": "img/dune.jpg",
-    "answers": [
-        "Frank Herbert",
-        "Herbert"
-    ],
-    "answerImg": "img/herbert.jpg",
-    "loc": {
-        "lat": "55.6761",
-        "lng": "12.5683"
+    {
+        "step": "2",
+        "question": "Hvor Gammel er Brabrand?",
+        "details": "Hint: Din by er gammel, (vælge de nærmeste 100 år)",
+        "questionImg": "/shai-hulud.jpg",
+        "answers": [
+            "800"
+        ],
+        "answerImg": "/dune-3.jpg",
+        "loc": {
+            "lat": "56.1471",
+            "lng": "10.0983"
+        },
+        "answerText": "Brabrand er en bydel i Aarhus, og er en af de ældste bydele i Aarhus. Bydelen er over 800 år gammel."
     },
-    "answerText": "Paul Atreides er hovedpersonen i Dune. Han er søn af Duke Leto Atreides og Lady Jessica, og er arving til Hertugdømmet Atreides."
-}
+    {
+        "step": "3",
+        "question": "Hvem sabte Apple?",
+        "details": "Apple er et amerikansk multinationelt teknologiselskab, måske har du en iPhone, iPad eller Macbook?",
+        "questionImg": "/shai-hulud.jpg",
+        "answers": [
+            "Steve Jobs",
+            "Jobs"
+        ],
+        "answerImg": "/dune-3.jpg",
+        "loc": {
+            "lat": "56.1471",
+            "lng": "10.0983"
+        },
+        "answerText": "Brabrand er en bydel i Aarhus, og er en af de ældste bydele i Aarhus. Bydelen er over 800 år gammel."
+    },
+    {
+        "step": "4",
+        "question": "Hvad heddere hovedpersonen i Dune?",
+        "details": "Dune er en science fiction roman fra 1965, skrevet af Frank Herbert. Bogen er den første i en serie på seks bøger, og er en af de mest solgte science fiction bøger nogensinde.",
+        "questionImg": "/shai-hulud.jpg",
+        "answers": [
+            "Paul Atreides",
+            "Paul"
+        ],
+        "answerImg": "/dune-3.jpg",
+        "loc": {
+            "lat": "56.1471",
+            "lng": "10.0983"
+        },
+        "answerText": "Paul Atreides er hovedpersonen i Dune. Han er søn af Duke Leto Atreides og Lady Jessica, og er arving til Hertugdømmet Atreides."
+    },
+    {
+        "step": "5",
+        "question": "Hygge Gruppen",
+        "questionImg": "img/dune.jpg",
+        "answers": [
+            "Frank Herbert",
+            "Herbert"
+        ],
+        "answerImg": "img/herbert.jpg",
+        "loc": {
+            "lat": "55.6761",
+            "lng": "12.5683"
+        },
+        "answerText": "Paul Atreides er hovedpersonen i Dune. Han er søn af Duke Leto Atreides og Lady Jessica, og er arving til Hertugdømmet Atreides."
+    }
 ]

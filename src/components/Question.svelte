@@ -1,5 +1,6 @@
 
 <script lang="ts">
+    import { base } from '$app/paths';
     import type Step from '$lib/quiz.json';
 	import { createEventDispatcher } from 'svelte';
     import {
@@ -67,6 +68,6 @@
     </Card>
 </Container>
 <Container fluid>
-    <img {src} alt="..." class="img-fluid" />
+    <img src={base + src} alt="..." class="img-fluid" />
 </Container>
 
