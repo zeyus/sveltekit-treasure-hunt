@@ -1,7 +1,21 @@
 <script lang="ts">
     import type Step from '$lib/quiz.json';
 	import { createEventDispatcher } from 'svelte';
-    import { FormGroup, Button, Icon } from '@sveltestrap/sveltestrap';
+    import {
+        Card,
+        CardBody,
+        CardFooter,
+        CardHeader,
+        CardSubtitle,
+        CardText,
+        CardTitle,
+        FormGroup,
+        Button,
+        Icon,
+        Row,
+        Col,
+        Container
+    } from '@sveltestrap/sveltestrap';
 
     const dispatch = createEventDispatcher();
     export let question: Step;
@@ -58,14 +72,35 @@
     }
 
 </script>
-<FormGroup>
-    <p>Perfekt!
-    {question.answerText}</p>
-    <p>din næste placering er</p>
-    <h3>{question.loc.lat}, {question.loc.lng}</h3>
-    <p>du er her: {curLocation.lat},{curLocation.lng} <Button on:click={getPos} color="success"><Icon name="recycle"/></Button></p>
-    <Icon name="map" /> Map: <Button href="http://maps.apple.com/maps?q={question.loc.lat},{question.loc.lng}"><Icon name="apple" /></Button>
-    <Button href="http://maps.google.com/maps?q={question.loc.lat},{question.loc.lng}"><Icon name="android" /></Button>
-    <Button color="primary" on:click={nextStep} disabled={!closeEnough}>Næste</Button>
-</FormGroup>
-<img {src} alt="..." width="50%" />
+<style>
+    .quizimg {
+        text-align: center;
+        margin: 10px auto;
+    }
+</style>
+<Card>
+    <CardHeader>
+        <CardTitle style="text-align:center;">🌟 sPerfekt! 🌟</CardTitle>
+        <CardText>{question.answerText}</CardText>
+    </CardHeader>
+    <CardBody>
+        <Row>
+            <Col><CardSubtitle>din næste placering er</CardSubtitle></Col>
+            <Col><CardText>{question.loc.lat}, {question.loc.lng}</CardText></Col>
+        </Row>
+        <Row>
+            <Col><CardSubtitle>du er her</CardSubtitle></Col>
+            <Col><CardText>{curLocation.lat}, {curLocation.lng} <Button on:click={getPos} color="success"><Icon name="recycle"/></Button></CardText></Col>
+        </Row>
+    </CardBody>
+    <CardFooter>
+        <Row>
+            <Col><Icon name="pin-map-fill" /> åbne kortet: <Button href="http://maps.apple.com/maps?q={question.loc.lat},{question.loc.lng}"><Icon name="apple" /></Button>
+            <Button href="http://maps.google.com/maps?q={question.loc.lat},{question.loc.lng}"><Icon name="android" /></Button></Col>
+            <Col style="text-align: right;"><Button color="primary" on:click={nextStep} disabled={!closeEnough}>Næste</Button></Col>
+        </Row>
+    </CardFooter>
+</Card>
+<div class="quizimg">
+    <img {src} alt="..." width="50%" />
+</div>

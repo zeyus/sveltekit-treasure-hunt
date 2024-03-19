@@ -3,7 +3,7 @@
     import { get } from 'svelte/store';
     import type { PageData } from './$types';
     import { stepIndex } from "$lib/store";
-    import { Icon, Button } from '@sveltestrap/sveltestrap';
+    import { Icon, Button, Row, Col, Container } from '@sveltestrap/sveltestrap';
     import Question from '../../../components/Question.svelte';
     import Answer from '../../../components/Answer.svelte';
     export let data: PageData;
@@ -37,16 +37,26 @@
     }
 </script>
 <style>
-
+    h1 {
+        font-size: 4rem;
+        background: -webkit-linear-gradient(#ff00ee, #31b4ff);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: 7rem;
+        text-align: center;
+    }
 </style>
-<h1>Skattejagt</h1>
+<h1>Legegruppens Skattejagt</h1>
 <p><Button color="danger" on:click={clearStoreAndMove} outline><Icon name="trash" /> Nulstil</Button></p>
 {#if step === -1}
-    <h1>Naughty naughty!</h1>
-    <p>Det er ikke tilladt at gå direkte til en side i skattejagten!</p>
-    <p>Klik på knappen for at gå tilbage. <Button color="primary" on:click={moveToNextStep}>tilbage</Button></p>
-    <img {src} alt="Pirate" width="50%" />
-    
+    <Container>
+        <Row><h2>Naughty naughty!</h2></Row>
+        <Row><p>Det er ikke tilladt at gå direkte til en side i skattejagten!</p></Row>
+        <Row><p>Klik på knappen for at gå tilbage.</p></Row>
+        <Row><Button color="primary" on:click={moveToNextStep}>tilbage</Button></Row>
+        <Row><img {src} alt="Pirate" width="50%" style="margin: 10px auto;" /></Row>
+    </Container>
 {:else if answered !== true}
     <p>Questioner { step }</p>
     <Question question={data.question} on:next={showAnswer} />

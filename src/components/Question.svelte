@@ -2,7 +2,20 @@
 <script lang="ts">
     import type Step from '$lib/quiz.json';
 	import { createEventDispatcher } from 'svelte';
-    import { Form, FormGroup, Button, Input } from '@sveltestrap/sveltestrap';
+    import {
+        Card,
+        CardBody,
+        CardFooter,
+        CardHeader,
+        CardSubtitle,
+        CardText,
+        CardTitle,
+        Form,
+        FormGroup,
+        Button,
+        Input,
+        Icon
+    } from '@sveltestrap/sveltestrap';
 
     const dispatch = createEventDispatcher();
     export let question: Step;
@@ -24,22 +37,39 @@
     }
 
     function updateStoreAndMove() {
+        validate(answer);
         if (validated) {
             dispatch('next', { step: true });
         }
     }
 
-    $: validate(answer);
+    // $: validate(answer);
 </script>
-<h2>{question.question}</h2>
-{#if question.details}
-    <p>{question.details}</p>
-{/if}
-<Form {validated} on:submit={(e) => e.preventDefault()}>
-<FormGroup>
-    Hvad siger du? <Input type="text" placeholder="Svar" feedback="{feedback}" bind:value={answer} valid={validated && showMsg} invalid={!validated && showMsg} />
-</FormGroup>
-<Button type="submit" on:click={updateStoreAndMove}>checke</Button>
-</Form>
-<img {src} alt="..." width="50%" />
+<style>
+    .quizimg {
+        text-align: center;
+        margin: 10px auto;
+    }
+</style>
+<Card>
+    <CardHeader>
+        <CardTitle style="text-align:center;">➡️<span style="color: #FFAAFF;">{question.question}</span>⬅️</CardTitle>
+    </CardHeader>
+    <CardBody>
+        {#if question.details}
+            <p>{question.details}</p>
+        {/if}
+        <Form {validated} on:submit={(e) => e.preventDefault()}>
+            <FormGroup>
+                Hvad siger du? <Input type="text" placeholder="Svar" feedback="{feedback}" bind:value={answer} valid={validated && showMsg} invalid={!validated && showMsg} />
+            </FormGroup>
+        </Form>
+    </CardBody>
+    <CardFooter>
+        <Button type="submit" on:click={updateStoreAndMove}>checke</Button>
+    </CardFooter>
+</Card>
+<div class="quizimg">
+    <img {src} alt="..." width="50%" />
+</div>
 

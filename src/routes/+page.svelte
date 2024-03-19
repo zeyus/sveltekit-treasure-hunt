@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Button } from '@sveltestrap/sveltestrap';
+    import { Button, Row, Col } from '@sveltestrap/sveltestrap';
 
     function startHunt() {
         console.log('Starting the hunt!');
@@ -14,9 +14,20 @@
         background-clip: text;
         -webkit-text-fill-color: transparent;
         line-height: 7rem;
+        text-align: center;
     }
 </style>
-<h1>Skattejagt</h1>
-<p>Tryk på knappen for at starte!</p>
-
-<Button color="primary" on:click="{startHunt}">Begynde at jage!</Button>
+<Row>
+    <Col style="text-align: center;"><h1>Legegruppens Skattejagt</h1></Col>
+</Row>
+<Row>
+    <Col style="text-align: center;">Tryk på knappen for at starte!</Col>
+</Row>
+<Row>
+    <Col style="text-align: center;">
+        <Button color="primary" on:click="{startHunt}">Begynde at jage!</Button>
+    </Col>
+</Row>
+<Row>
+    <Col style="text-align: center;"><img src="/hunt.jpg" alt="treasure hunt" width="50%" style="margin: 10px auto;" /></Col>
+</Row>
