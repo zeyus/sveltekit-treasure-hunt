@@ -55,13 +55,17 @@
         console.log('Moving to next step');
         completed = false;
         step = parseInt(get(stepIndex));
-        goto(base+`/hunt/${parseInt(get(stepIndex))}`, { replaceState: true, invalidateAll: true });
+        let dest = `/hunt/${parseInt(get(stepIndex))}`
+        invalidate(dest);
+        goto(base+dest, { replaceState: true, invalidateAll: true });
     }
 
     function moveToPrevStep() {
         console.log('Moving to previous step');
         step = data.prev;
-        goto(base+`/hunt/${data.prev}`, { replaceState: true, invalidateAll: true });
+        let dest = `/hunt/${data.prev}`
+        invalidate(dest);
+        goto(base+dest, { replaceState: true, invalidateAll: true });
     }
 
     function clearStoreAndMove() {
@@ -69,6 +73,7 @@
         completed = false;
         step = 1;
         stepIndex.set(1);
+        invalidate('/hunt/1');
         goto(base+'/hunt/1', { replaceState: true, invalidateAll: true });
     }
 </script>
