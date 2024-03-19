@@ -1,18 +1,25 @@
-# create-svelte
+# Geo-location Treasure Hunt App
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+This is a step-by-step treasure hunt designed for one of my kids' playgroups. It works on mobile devides and uses the GPS to tell the player how far away they are from the next target. When they get close enough (set to 10m), they can click a button to reveal the next clue (right now, this can be bypassed by refreshing the page manually, this is intentional because I didn't want something to go wrong with the GPS and the kids to be stuck).
 
-## Creating a project
+for a live demo see: [http://zeyus.com/sveltekit-treasure-hunt/](http://zeyus.com/sveltekit-treasure-hunt/)
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Features
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+- [x] GPS location tracking
+- [x] Distance to next target
+- [x] Clue reveal button
+- [x] Clue reveal on distance threshold
+- [x] Step by step questions, answers and clues (obviously can be adapted to be relevant to the location)
+- [x] Mobile friendly
+- [x] Works completely serverless, and is deployable on github pages
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+## Structure
+
+Question and answer templates are in [`src/components/`](src/components/). The main step-by-step is in [`src/routes/hunt/[step=integer]/+page.svelte`](src/routes/hunt/[step=integer]/+page.svelte).
+
+You can configure the questions, answers, locations and image paths in the [`src/lib/quiz.json`](src/lib/quiz.json) file. Images are stored in the [`static/`](static/) folder. Subdirectory / base path configuration is in the [`svelte.config.js`](svelte.config.js) file.
+
 
 ## Developing
 
