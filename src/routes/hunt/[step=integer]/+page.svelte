@@ -36,18 +36,18 @@
 
     function moveToNextStep() {
         console.log('Moving to next step');
-        goto(base+`/hunt/${parseInt(get(stepIndex))}`);
+        goto(base+`/hunt/${parseInt(get(stepIndex))}`, { replaceState: true, invalidateAll: true });
     }
 
     function moveToPrevStep() {
         console.log('Moving to previous step');
-        goto(base+`/hunt/${data.prev}`);
+        goto(base+`/hunt/${data.prev}`, { replaceState: true, invalidateAll: true });
     }
 
     function clearStoreAndMove() {
         console.log('Clearing store and moving');
         stepIndex.set(1);
-        goto(base+'/hunt/1');
+        goto(base+'/hunt/1', { replaceState: true, invalidateAll: true });
     }
 </script>
 <style>

@@ -5,7 +5,7 @@
     let src = base + "/hunt.jpg";
     function startHunt() {
         console.log('Starting the hunt!');
-        goto(base + '/hunt/1');
+        goto(base + '/hunt/1', { replaceState: true, invalidateAll: true });
     }
 </script>
 <style>
