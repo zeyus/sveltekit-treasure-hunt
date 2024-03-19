@@ -1,6 +1,5 @@
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
-const dev = "production" === "development";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -16,14 +15,26 @@ const config = {
 		//  }),
 		appDir: 'app',
 		adapter: adapter({
-			fallback: "index.html",
+			fallback: "404.html",
 			pages: "docs",
 			assets: "docs"
 		}),
 		 paths: {
             // change below to your repo name
-            base: dev ? "" : "/sveltekit-treasure-hunt",
-        }
+            base: process.env.NODE_ENV === "production" ? "/sveltekit-treasure-hunt" : "",
+        },
+		prerender: {
+			entries: [
+				'*',
+				'/hunt/1',
+				'/hunt/2',
+				'/hunt/3',
+				'/hunt/4',
+				'/hunt/5',
+				'/hunt/6',
+				'/hunt/7',
+			]
+		}
 	}
 };
 
