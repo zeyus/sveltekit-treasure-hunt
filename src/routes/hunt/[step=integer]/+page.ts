@@ -1,21 +1,38 @@
 export const ssr = false;
-// import { get } from 'svelte/store';
 import steps from '$lib/quiz.json';
-// import { stepIndex } from "$lib/store";
 
 import type { PageLoad } from './$types';
 
 export const load: PageLoad = ({ params }) => {
-    if (params.step === undefined || params.step > steps.length || params.step < 1) {
+    // make sure the step is valid and in range
+    const step = parseInt(params.step);
+    const nSteps = steps.length;
+    if (isNaN(step) || step < 1) {
         return {
-            step: -1
+            step: -1,
+            prev: 1,
+            count: nSteps,
+            oob: false,
         };
     }
-    const step = parseInt(params.step);
-    const question = steps[step - 1];
 
+    if (step > nSteps) {
+        return {
+            step: -1,
+            prev: nSteps,
+            count: nSteps,
+            oob: true,
+        };
+    }
+
+    // get the question for the step
+    const question = steps[step - 1];
+    // send it!
 	return {
         step: step,
-        question: question
+        prev: step - 1,
+        question: question,
+        count: nSteps,
+        oob: false
 	};
 }

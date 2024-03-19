@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Container } from '@sveltestrap/sveltestrap';
 </script>
-<Container>
+<Container lg>
 <slot></slot>
 </Container>
