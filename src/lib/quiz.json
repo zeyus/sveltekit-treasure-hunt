@@ -3,15 +3,15 @@
         "step": "1",
         "question": "Hven Sang denne sang 'Happy' fra 2013?",
         "details": "Magne personer har sun get sangen",
-        "questionImg": "/shai-hulud.jpg",
+        "questionImg": "/happy.jpg",
         "answers": [
             "Pharrell Williams",
             "Pharrell"
         ],
-        "answerImg": "/dune-3.jpg",
+        "answerImg": "/pharrell.jpg",
         "loc": {
-            "lat": "56.1471",
-            "lng": "10.0983"
+            "lat": "56.151602998320181",
+            "lng": "10.091466728702313"
         },
         "answerText": "Pharrel Williams er en amerikansk sanger, sangskriver, musikproducer og mode designer. Han er bedst kendt som en del af hip hop og R&B produktionsteamet The Neptunes og som forsanger i gruppen N.E.R.D."
     },
@@ -19,14 +19,14 @@
         "step": "2",
         "question": "Hvor Gammel er Brabrand?",
         "details": "Hint: Din by er gammel, (vælge de nærmeste 100 år)",
-        "questionImg": "/shai-hulud.jpg",
+        "questionImg": "/brabrand.jpg",
         "answers": [
             "800"
         ],
-        "answerImg": "/dune-3.jpg",
+        "answerImg": "/brabrand2.jpg",
         "loc": {
-            "lat": "56.1471",
-            "lng": "10.0983"
+            "lat": "56.14950153495022",
+            "lng": "10.089752784010717"
         },
         "answerText": "Brabrand er en bydel i Aarhus, og er en af de ældste bydele i Aarhus. Bydelen er over 800 år gammel."
     },
@@ -34,15 +34,15 @@
         "step": "3",
         "question": "Hvem sabte Apple?",
         "details": "Apple er et amerikansk multinationelt teknologiselskab, måske har du en iPhone, iPad eller Macbook?",
-        "questionImg": "/shai-hulud.jpg",
+        "questionImg": "/apple.jpg",
         "answers": [
             "Steve Jobs",
             "Jobs"
         ],
-        "answerImg": "/dune-3.jpg",
+        "answerImg": "/steve.jpg",
         "loc": {
-            "lat": "56.1471",
-            "lng": "10.0983"
+            "lat": "56.15031837412376",
+            "lng": "10.089364058279466"
         },
         "answerText": "Brabrand er en bydel i Aarhus, og er en af de ældste bydele i Aarhus. Bydelen er over 800 år gammel."
     },
@@ -57,23 +57,23 @@
         ],
         "answerImg": "/dune-3.jpg",
         "loc": {
-            "lat": "56.1471",
-            "lng": "10.0983"
+            "lat": "56.15176477030447",
+            "lng": "10.088486300151956"
         },
         "answerText": "Paul Atreides er hovedpersonen i Dune. Han er søn af Duke Leto Atreides og Lady Jessica, og er arving til Hertugdømmet Atreides."
     },
     {
         "step": "5",
-        "question": "Hygge Gruppen",
-        "questionImg": "img/dune.jpg",
+        "question": "placere bogstaverne i den rigtige rakkefølge: ggyuperhgep",
+        "questionImg": "/dune.jpg",
         "answers": [
-            "Frank Herbert",
-            "Herbert"
+            "hyggegruppe",
+            "hygge gruppe"
         ],
-        "answerImg": "img/herbert.jpg",
+        "answerImg": "/shed.jpg",
         "loc": {
-            "lat": "55.6761",
-            "lng": "12.5683"
+            "lat": "56.152894789504394",
+            "lng": "10.090691576405948"
         },
         "answerText": "Paul Atreides er hovedpersonen i Dune. Han er søn af Duke Leto Atreides og Lady Jessica, og er arving til Hertugdømmet Atreides."
     }
