@@ -57,7 +57,7 @@
         step = parseInt(get(stepIndex));
         let dest = `/hunt/${parseInt(get(stepIndex))}`
         invalidate(dest);
-        goto(base+dest, { replaceState: true, invalidateAll: true });
+        window.location.href=base+dest;
     }
 
     function moveToPrevStep() {
@@ -65,7 +65,7 @@
         step = data.prev;
         let dest = `/hunt/${data.prev}`
         invalidate(dest);
-        goto(base+dest, { replaceState: true, invalidateAll: true });
+        window.location.href=base+dest;
     }
 
     function clearStoreAndMove() {
@@ -74,7 +74,7 @@
         step = 1;
         stepIndex.set(1);
         invalidate('/hunt/1');
-        goto(base+'/hunt/1', { replaceState: true, invalidateAll: true });
+        window.location.href=base+'/hunt/1';
     }
 </script>
 <style>
