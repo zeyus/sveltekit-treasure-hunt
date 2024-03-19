@@ -1,6 +1,8 @@
 <script lang="ts">
     import { goto } from '$app/navigation';
     import { base } from '$app/paths';
+    import { onMount } from 'svelte';
+	import { invalidate } from '$app/navigation';
     let src="/pirate.jpg"
     import { get } from 'svelte/store';
     import type { PageData } from './$types';
@@ -11,6 +13,21 @@
     export let data: PageData;
     let step: number;
 
+    onMount(() => {
+		const interval = setInterval(() => {
+			invalidate('/hunt/1');
+            invalidate('/hunt/2');
+            invalidate('/hunt/3');
+            invalidate('/hunt/4');
+            invalidate('/hunt/5');
+            invalidate('/hunt/6');
+            invalidate('/hunt/7');
+		}, 1000);
+
+		return () => {
+			clearInterval(interval);
+		};
+	});
 
     src = data.question?.questionImg || src;
     step = parseInt(get(stepIndex));
