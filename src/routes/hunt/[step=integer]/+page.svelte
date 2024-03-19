@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { goto } from '$app/navigation';
     import { base } from '$app/paths';
     let src="/pirate.jpg"
     import { get } from 'svelte/store';
@@ -35,18 +36,18 @@
 
     function moveToNextStep() {
         console.log('Moving to next step');
-        window.location.href = `/hunt/${parseInt(get(stepIndex))}`;
+        goto(base+`/hunt/${parseInt(get(stepIndex))}`);
     }
 
     function moveToPrevStep() {
         console.log('Moving to previous step');
-        window.location.href = `/hunt/${data.prev}`;
+        goto(base+`/hunt/${data.prev}`);
     }
 
     function clearStoreAndMove() {
         console.log('Clearing store and moving');
         stepIndex.set(1);
-        window.location.href = '/hunt/1';
+        goto(base+'/hunt/1');
     }
 </script>
 <style>

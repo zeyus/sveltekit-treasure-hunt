@@ -1,10 +1,11 @@
 <script lang="ts">
+    import { goto } from '$app/navigation';
     import { base } from '$app/paths';
     import { Button, Row, Col } from '@sveltestrap/sveltestrap';
     let src = base + "/hunt.jpg";
     function startHunt() {
         console.log('Starting the hunt!');
-        window.location.href = '/hunt/1';
+        goto(base + '/hunt/1');
     }
 </script>
 <style>
