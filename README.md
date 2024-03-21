@@ -15,6 +15,7 @@ for a live demo see: [http://zeyus.com/sveltekit-treasure-hunt/](http://zeyus.co
 - [x] Works completely serverless, and is deployable on github pages
 - [x] Prevents little sneaks from just changing the URL to the next question (they don't yet know how to mess with browser storage).
 - [x] Can to back to previous clues
+- [x] Audio player (for small mp3 clips)
 
 ### Not implemented
 
