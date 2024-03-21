@@ -10,6 +10,7 @@ declare module "$lib/quiz.json" {
         step: number;
         question: string;
         details?: string;
+        audioClip?: string;
         questionImg: string;
         answers: string[];
         answerImg: string;

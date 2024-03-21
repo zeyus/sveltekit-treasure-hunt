@@ -1,6 +1,7 @@
 
 <script lang="ts">
     import { base } from '$app/paths';
+    import AudioPlayer from './AudioPlayer.svelte';
     import type Step from '$lib/quiz.json';
 	import { createEventDispatcher } from 'svelte';
     import {
@@ -37,6 +38,8 @@
         });
     }
 
+    const audioFile: string = question.audioClip || '';
+
     function updateStoreAndMove() {
         validate(answer);
         if (validated) {
@@ -55,6 +58,9 @@
         <CardBody>
             {#if question.details}
                 <p>{question.details}</p>
+            {/if}
+            {#if audioFile}
+                <AudioPlayer src={base+audioFile} />
             {/if}
             <Form {validated} on:submit={(e) => e.preventDefault()}>
                 <FormGroup>

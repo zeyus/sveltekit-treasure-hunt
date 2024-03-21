@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { goto } from '$app/navigation';
+    import go2 from '$lib/go2';
     import { base } from '$app/paths';
     import { onMount } from 'svelte';
 	import { invalidate } from '$app/navigation';
@@ -58,7 +58,8 @@
         step = parseInt(get(stepIndex));
         let dest = `/hunt/${parseInt(get(stepIndex))}`
         invalidate(dest);
-        window.location.href=base+dest;
+        go2(base+dest);
+        // window.location.href=base+dest;
     }
 
     function moveToPrevStep() {
@@ -66,7 +67,8 @@
         step = data.prev;
         let dest = `/hunt/${data.prev}`
         invalidate(dest);
-        window.location.href=base+dest;
+        // window.location.href=base+dest;
+        go2(base+dest);
     }
 
     function clearStoreAndMove() {
@@ -75,7 +77,8 @@
         step = 1;
         stepIndex.set(1);
         invalidate('/hunt/1');
-        window.location.href=base+'/hunt/1';
+        go2('/hunt/1');
+        // window.location.href=base+'/hunt/1';
     }
 </script>
 <style>

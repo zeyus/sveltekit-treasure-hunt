@@ -1,11 +1,13 @@
 <script lang="ts">
-    import { goto } from '$app/navigation';
+    import go2 from '$lib/go2';
     import { base } from '$app/paths';
     import { Button, Row, Col } from '@sveltestrap/sveltestrap';
     let src = base + "/hunt.jpg";
     function startHunt() {
         console.log('Starting the hunt!');
-        goto(base + '/hunt/1', { replaceState: true, invalidateAll: true });
+
+
+        go2(base+'/hunt/1');
     }
 </script>
 <style>

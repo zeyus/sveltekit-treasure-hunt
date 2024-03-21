@@ -4,14 +4,15 @@
         "question": "Hvem Sang denne sang 'Happy' fra 2013?",
         "details": "Magne personer har sun get sangen",
         "questionImg": "/happy.jpg",
+        "audioClip": "/happy_clip.mp3",
         "answers": [
             "Pharrell Williams",
             "Pharrell"
         ],
         "answerImg": "/pharrell.jpg",
         "loc": {
-            "lat": "50.00001",
-            "lng": "10.00001"
+            "lat": "50.0001",
+            "lng": "10.0001"
         },
         "answerText": "Pharrel Williams er en amerikansk sanger, sangskriver, musikproducer og mode designer. Han er bedst kendt som en del af hip hop og R&B produktionsteamet The Neptunes og som forsanger i gruppen N.E.R.D."
     },
@@ -25,8 +26,8 @@
         ],
         "answerImg": "/brabrand2.jpg",
         "loc": {
-            "lat": "50.00001",
-            "lng": "10.00001"
+            "lat": "50.0002",
+            "lng": "10.0002"
         },
         "answerText": "Brabrand er en bydel i Aarhus, og er en af de ældste bydele i Aarhus. Bydelen er over 800 år gammel."
     },
@@ -41,8 +42,8 @@
         ],
         "answerImg": "/steve.jpg",
         "loc": {
-            "lat": "50.00001",
-            "lng": "10.00001"
+            "lat": "50.0003",
+            "lng": "10.0003"
         },
         "answerText": "Brabrand er en bydel i Aarhus, og er en af de ældste bydele i Aarhus. Bydelen er over 800 år gammel."
     },
@@ -53,12 +54,14 @@
         "questionImg": "/shai-hulud.jpg",
         "answers": [
             "Paul Atreides",
-            "Paul"
+            "Paul",
+            "Poul",
+            "Poul Atreides"
         ],
         "answerImg": "/dune-3.jpg",
         "loc": {
-            "lat": "50.00001",
-            "lng": "10.00001"
+            "lat": "50.0004",
+            "lng": "10.0004"
         },
         "answerText": "Paul Atreides er hovedpersonen i Dune. Han er søn af Duke Leto Atreides og Lady Jessica, og er arving til Hertugdømmet Atreides."
     },
@@ -72,8 +75,8 @@
         ],
         "answerImg": "/congrats.jpg",
         "loc": {
-            "lat": "50.00001",
-            "lng": "10.00001"
+            "lat": "50.0005",
+            "lng": "10.0005"
         },
         "answerText": "Paul Atreides er hovedpersonen i Dune. Han er søn af Duke Leto Atreides og Lady Jessica, og er arving til Hertugdømmet Atreides."
     }
