@@ -7,4 +7,4 @@ node_modules
 !.env.example
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
-quiz.json
+src/lib/quiz.json
